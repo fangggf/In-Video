@@ -1,0 +1,223 @@
+/* =========================================
+   1. Modern Tech Variables & Reset
+   ========================================= */
+:root {
+    /* Typography */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    
+    /* Color Palette - Slate & Electric Blue */
+    --tech-blue: #2563eb;         /* Vibrant primary blue */
+    --tech-blue-dark: #1e40af;    /* Darker blue for hover */
+    --tech-dark: #0f172a;         /* Deep charcoal background/text */
+    --tech-slate: #334155;        /* Secondary text color */
+    --tech-slate-light: #f1f5f9;  /* Light background areas */
+    --tech-border: #e2e8f0;       /* Subtle borders */
+    --white: #ffffff;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--tech-dark) 0%, var(--tech-blue) 100%);
+
+    /* Component styles */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-sans);
+    color: var(--tech-dark);
+    background-color: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   2. Typography & General Styling
+   ========================================= */
+
+/* Make headings bolder and sharper */
+.title {
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--tech-dark) !important;
+}
+
+.subtitle {
+    color: var(--tech-slate) !important;
+    font-weight: 400;
+}
+
+/* Gradient text effect for the main title */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+/* Monospaced fonts for tech accents */
+.mono-heading { font-family: var(--font-mono); letter-spacing: -0.03em; }
+.mono-text { font-family: var(--font-mono); font-size: 0.85rem; }
+
+/* Secondary text color utility */
+.text-secondary { color: var(--tech-slate) !important; }
+
+/* Section separators */
+.section.is-light-mode {
+    background-color: var(--tech-slate-light);
+    border-top: 1px solid var(--tech-border);
+    border-bottom: 1px solid var(--tech-border);
+}
+
+/* =========================================
+   3. Components & Cards
+   ========================================= */
+
+/* Top Banner */
+.tech-banner {
+    background: var(--tech-dark);
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.mono-badge {
+    font-family: var(--font-mono);
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin: 0 5px;
+    letter-spacing: 0.05em;
+}
+
+.mono-badge.is-dark { background: var(--tech-blue); font-weight: 700; }
+
+/* Author links */
+.publication-authors a {
+    color: var(--tech-blue) !important;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.publication-authors a:hover { color: var(--tech-blue-dark) !important; text-decoration: underline;}
+
+/* Buttons modernized */
+.button.tech-button {
+    background-color: var(--tech-dark) !important;
+    border: 2px solid transparent !important;
+    font-weight: 600;
+    padding: 1.25rem 1.5rem !important;
+    transition: all 0.3s ease;
+}
+
+.button.tech-button:hover {
+    background-color: var(--tech-blue) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* The Main "Tech Card" Container */
+.tech-card {
+    background: var(--white);
+    border: 1px solid var(--tech-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific card tweaks */
+.hero-video-card { padding: 1.5rem; border-color: var(--tech-blue); }
+.abstract-card { padding: 3rem 2.5rem; }
+
+.framework-image {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--tech-border);
+    box-shadow: var(--shadow-sm);
+}
+
+/* =========================================
+   4. The New Video Grid Gallery
+   ========================================= */
+
+.grid-gallery {
+    display: grid;
+    /* Auto-fit columns: min 350px wide, max 1 fraction of available space */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.grid-item {
+    /* The tech-card styles apply here, plus hover effects */
+}
+
+.grid-item:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--tech-blue);
+    transform: translateY(-3px);
+}
+
+.grid-header {
+    padding: 0.75rem 1rem;
+    background: var(--tech-slate-light);
+    border-bottom: 1px solid var(--tech-border);
+    font-weight: 600;
+    color: var(--tech-slate);
+}
+
+.grid-item video {
+    display: block;
+    width: 100%;
+    /* Optional: force a consistent aspect ratio if videos differ */
+    /* aspect-ratio: 16 / 9;  */
+    /* object-fit: cover; */
+}
+
+
+/* =========================================
+   5. BibTeX & Footer
+   ========================================= */
+
+ /* Fix for BibTeX card spacing */
+#BibTeX .tech-card {
+  padding: 30px; /* Adds space inside the box so text doesn't hit the edge */
+}
+
+/* Ensure the title sits correctly inside that padding */
+#BibTeX .section-title {
+  margin-top: 0 !important; /* Prevents it from being pushed down too far */
+  margin-left: 0 !important;
+}
+  
+.tech-pre {
+    background-color: var(--tech-slate-light) !important;
+    border: 1px solid var(--tech-border) !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 1.5rem !important;
+}
+
+code {
+    font-family: var(--font-mono) !important;
+    color: var(--tech-dark) !important;
+    background: transparent !important;
+}
+
+.footer {
+    background: var(--white);
+    border-top: 1px solid var(--tech-border);
+    padding: 3rem 0;
+}
+
+/* Mobile Tweaks */
+@media screen and (max-width: 768px) {
+    .publication-title { font-size: 2.5rem !important; }
+    .abstract-card { padding: 1.5rem; }
+    /* On small screens, grid becomes 1 column */
+    .grid-gallery { grid-template-columns: 1fr; }
+}

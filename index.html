@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>In-Video Instructions: Visual Signals as Generative Control</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <main id="main-content">
+  
+  <div class="tech-banner">
+      <span class="mono-badge"><i class="fas fa-code-branch"></i> RESEARCH PREPRINT 2025</span>
+      <span class="mono-badge is-dark">NUS</span>
+  </div>
+
+
+  <section class="hero">
+    <div class="hero-body pt-6">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            
+            <h1 class="title is-1 publication-title">
+              In-Video Instructions:<br> 
+              <span class="gradient-text">Visual Signals as Generative Control</span>
+            </h1>
+            
+            <div class="is-size-5 publication-authors mt-5">
+              <span class="author-block">
+                <a href="https://fangggf.github.io/" target="_blank">Gongfan Fang</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://horseee.github.io/" target="_blank">Xinyin Ma</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://sites.google.com/site/sitexinchaowang/" target="_blank">Xinchao Wang</a>
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-institution mt-3">
+              <span class="author-block">National University of Singapore</span>
+            </div>
+
+            <div class="publication-links mt-5">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="button is-dark is-rounded tech-button">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+                <span class="link-block">
+                <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                class="button is-dark is-rounded tech-button">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Github</span>
+                </a>
+            </span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <div class="has-text-centered mb-5">
+      <h2 class="title is-4 mono-heading">“Visuals as Precise Control”</h2>
+    </div>
+    
+    <div class="tech-card hero-video-card">
+      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/video1.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered mt-4 is-size-6 text-secondary">
+        A video generated with the proposed In-Video Instructions. The textual prompt is fixed as “Follow the instructions step by step,” while the model synthesizes content purely from the embedded visual signals within the input frames.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section is-light-mode">
+  <div class="container is-max-desktop">
+    <div class="tech-card abstract-card">
+        <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+            <h2 class="title is-3 section-title">Abstract</h2>
+            <div class="content has-text-justified text-secondary">
+            <p>
+                Large-scale video generative models have recently demonstrated strong visual capabilities. In this work, we investigate whether such capabilities can be harnessed for controllable image-to-video generation by interpreting visual signals embedded within the frames as instructions, a paradigm we term In-Video Instruction. 
+            </p>
+            <p>
+                In contrast to prompt-based control, which provides textual descriptions that are inherently global and coarse, <strong style="color: var(--tech-blue);">In-Video Instruction encodes user guidance directly into the visual domain through elements such as overlaid text, arrows, or trajectories</strong>. This enables explicit, spatial-aware, and unambiguous correspondences between visual subjects and their intended actions by assigning distinct instructions to different objects. 
+            </p>
+            </div>
+            
+            <div class="container mt-5">
+            <img src="static/images/framework.png" alt="Method Framework" class="framework-image">
+            <p class="subtitle has-text-centered is-size-7 mt-3 text-secondary">
+                Figure 1. Overview of the proposed In-Video Instruction framework.
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="gallery">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 section-title has-text-centered mb-6">Generative Results</h2>
+    
+    <div class="grid-gallery">
+        
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 01</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video2.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 02</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video3.mp4" type="video/mp4">
+          </video>
+      </div>
+      
+       <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 03</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video4.mp4" type="video/mp4">
+          </video>
+      </div>
+      
+       <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 04</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video5.mp4" type="video/mp4">
+          </video>
+      </div>
+      
+       <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 05</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video6.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 06</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video7.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 07</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video8.mp4" type="video/mp4">
+          </video>
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 08</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video9.mp4" type="video/mp4">
+          </video>  
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 09</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video10.mp4" type="video/mp4">
+          </video>  
+      </div>
+
+      <div class="grid-item tech-card">
+          <div class="grid-header mono-text">Example 10</div>
+          <video autoplay controls muted loop preload="metadata">
+            <source src="static/videos/video11.mp4" type="video/mp4">
+          </video>  
+      </div>
+  </div>
+</section>
+
+
+<section class="section is-light-mode" id="BibTeX">
+    <div class="container is-max-desktop">
+        <div class="tech-card">
+            <h2 class="title is-4 section-title mb-4">BibTeX</h2>
+            <pre><code>@article{fang2025invideo,
+  title={In-Video Instructions: Visual Signals as Generative Control},
+  author={Fang, Gongfan and Ma, Xinyin and Wang, Xinchao},
+  journal={arXiv preprint arXiv:},
+  year={2025}
+}</code></pre>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p class="is-size-7 text-secondary">
+        Project page template adopted from Nerfies.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
